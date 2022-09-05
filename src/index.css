@@ -1,13 +1,124 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;900&family=Karla:wght@400;700&display=swap');
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  min-height: 100vh;
+  color: #fff;
+  background: #E5E5E5;
+  font-size: .5rem;
+  font-family: 'Karla', sans-serif;
+}
+.container header{
+  height: 4rem;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 0 1rem;
+}
+header .logo{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.logo__img{
+  width: 2rem;
+  height: 1.5rem;
+}
+.logo__text{
+  font-size: 1rem;
+  letter-spacing: -1.5px;
+}
+header .course{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+.container main{
+  max-width: 550px;
+  margin: 2.25rem;
+}
+main .form__inputs{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form__inputs input{
+  width: 100%;
+  height: 2.25rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  padding-left: .6rem;
+}
+::placeholder{
+  color: #0D0D0D;
+  font-size: .6rem;
+}
+.form__btn{
+  width: 100%;
+  height: 2.25rem;
+  color: #fff;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  font-size: .8rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+}
+main .meme{
+  width: 100%;
+  height: 20rem;
+  border: 1px solid red;
+  margin-top: 2rem;
+  position: relative;
+}
+.meme__img{
+  width: 100%;
+  max-height: 100%;
+}
+.meme__text{
+  position: absolute;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+}
+.meme__top-text{
+  top: 1rem;
+}
+.meme__bottom-text{
+  bottom: 1rem;
+}
+@media(min-width: 420px){
+  body{
+    font-size: 12px;
+  }
+  .container header{
+    padding: 0 2.5rem 0 1.25rem;
+  }
+  .logo__text{
+    font-size: 1.3rem;
+  }
+  .form__inputs input::placeholder{
+    font-size: 12px;
+  }
+  .form__btn{
+    font-size: 1rem;
+  }
+  .meme__text{
+    font-size: 2rem;
+  }
+}
+@media(min-width: 600px){
+  .container main{
+    margin: 2.25rem auto;
+  }
 }
