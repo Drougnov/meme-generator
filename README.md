@@ -12,11 +12,11 @@ It is a meme generator made with React JS.
 
 This is a tutorial project of [freeCodeCamp ft Scrimba's React tutorial course](https://youtu.be/bMknfKXIFA8).
 
-This project teaches(especially) you how to:
+## This project teaches you how to:
 
--how to handle data with useState and show them in UI
+-handle data with useState and show them in UI
 
--how to use input in React
+-use input in React
 
 ## Live Site URL
 
