@@ -1,5 +1,4 @@
 import React from 'react';
-import memesData from './memesData';
 
 export default function Main(){
 
@@ -10,15 +9,20 @@ export default function Main(){
         altText: 'Waiting Skeleton'
     })
 
-    const [allMemes,setAllMemes] = React.useState(memesData);
+    const [allMemes,setAllMemes] = React.useState([]);
+
+    React.useState(function(){
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res => res.json())
+        .then(data => setAllMemes(data.data.memes))
+    },[])
 
     function getRandomMeme(){
-        const memesArray = allMemes.data.memes;
-        const randomNumber = Math.floor(Math.random()*memesArray.length);
+        const randomNumber = Math.floor(Math.random()*allMemes.length);
         setMeme(prevMeme=>({
             ...prevMeme,
-            randomImage: memesArray[randomNumber].url,
-            altText: memesArray[randomNumber].name
+            randomImage: allMemes[randomNumber].url,
+            altText: allMemes[randomNumber].name
         }))
     }
 
