@@ -22,7 +22,7 @@ This is a tutorial project of [freeCodeCamp ft Scrimba's React tutorial course](
 
 ## Live Site URL
 
-<https://Drougnov.github.io/meme-generator>(https://Drougnov.github.io/meme-generator)
+<https://Drougnov.github.io/meme-generator>
 
 ## Built with
 
